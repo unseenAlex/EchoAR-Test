@@ -25,6 +25,7 @@
     <script src="./aframe_components/hold-drag.js"></script>
     <script src="./aframe_components/pinch-scale.js"></script>
     <script src="./aframe_components/two-finger-spin.js"></script>
+    <script src="./aframe_components/check-spawner.js"></script>
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
@@ -34,10 +35,21 @@
 
 <body>
 
-    <a-scene id="mainScene" debug xrweb gesture-detector xrextras-almost-there xrextras-loading xrextras-runtime-error>
+    <a-scene id="mainScene" debug xrweb gesture-detector xrextras-almost-there xrextras-loading xrextras-runtime-error
+    check-spawner = "modelID:#model_0-obj;
+    modelType: obj;
+    modelMTL: #model_0-mtl;
+    modelScale: 10 10 10;
+    modelRotation: 0 0 0;
+    targetLimit: 0;
+    ">
 
         <!--Load assets-->
         <a-assets>
+            <!-- <a-asset-item  id="model_0-obj" src="./model_0.obj"></a-asset-item>
+            <a-asset-item  id="model_0-mtl" src="./model_0.mtl"></a-asset-item> -->
+            <a-asset-item id="model_0-obj" src="./assets/EchoARTest_OBJ/Table.obj"></a-asset-item>
+            <a-asset-item id="model_0-mtl" src="./assets/EchoARTest_OBJ/Table.mtl"></a-asset-item>
         </a-assets>
 
         <!--Camera-->
